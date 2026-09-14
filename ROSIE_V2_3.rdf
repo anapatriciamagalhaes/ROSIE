@@ -1,0 +1,2849 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2024/8/ROSIE/"
+     xml:base="http://www.semanticweb.org/ontologies/2024/8/ROSIE/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ROSIE="http://www.semanticweb.org/anapa/ontologies/2024/8/ROSIE#"
+     xmlns:ROSIE1="http://www.semanticweb.org/ontologies/2024/8/ROSIE#"
+     xmlns:ServiceRobot="http://www.semanticweb.org/anapa/ontologies/2024/8/ServiceRobot#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#categorizesCatObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#categorizesCatObject">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isCategorizedCatObject"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <rdfs:comment>CategoryObject categorizesCatObject ScenarioObject</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#characterizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#characterizes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isCharacterizedAs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioAgent"/>
+        <rdfs:comment>CategoryAgent characterizes ScenarioAgent</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#composes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#composes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isStageOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+        <rdfs:comment>ComposedStep composes Step</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#connectChild -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#connectChild">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isChild"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PartConnection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#connectParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#connectParent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isParent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PartConnection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:comment>PartConnection connectParent ServiceRobotPart</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#contains">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isContainedIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:comment>Area contains Element</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordenates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordenates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+        <rdfs:comment>ServiceRobotBehavior coordenates PrimitiveSkill</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#grants -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#grants">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isGrantedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrivilegeKind"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person"/>
+        <rdfs:comment>PrivilegeKind grants Person</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isComponentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:comment>ServiceRobot hasComponent ServceRobotPart</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasDomain -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasDomain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementDomainKind"/>
+        <rdfs:comment>Requirement hasDomain RequirementDomainKing</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasGoal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Goal"/>
+        <rdfs:comment>Task hasGoal Goal</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasOrientation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasOrientation">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#orients"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#OrientationMeasure"/>
+        <rdfs:comment>Pose hasOrientation OrientationMeasure</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasPosition">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#positions"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure"/>
+        <rdfs:comment>Pose has PositionMeasure</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasSituation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasSituation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#StatusKind"/>
+        <rdfs:comment>ServiceRobot hasSituation StatusKind</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasSubComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasSubComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isSubComponentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:comment>ServiceRobotPart hasSubComponent ServiceRobotPart</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementTypeKind"/>
+        <rdfs:comment>Requirement hasType RequirementTypeKind</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#involvesAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#involvesAction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isActionOfContract"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Contract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+        <rdfs:comment>Contract involvesAction PrimitiveSkill</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#involvesPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#involvesPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPartOfContract"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Contract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:comment>Contract involvesPart ServiceRobotPart</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isAccessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isAccessedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <rdfs:comment>Area isAccessedBy Access</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isActionOfContract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isActionOfContract">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Contract"/>
+        <rdfs:comment>PrimitiveSkill isActionOfContract Contract</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isCategorizedCatObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isCategorizedCatObject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryObject"/>
+        <rdfs:comment>ScenarioObject isCategorizedCatObject CategoryObject</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isCharacterizedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isCharacterizedAs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioAgent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryAgent"/>
+        <rdfs:comment>ScenarioAgent isCharacterizedAs CategoryAgent</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isChild -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isChild">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PartConnection"/>
+        <rdfs:comment>ServiceRobotPart isChild PartConnection</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isComponentOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot"/>
+        <rdfs:comment>ServiceRobotPart is ComponentOf ServiceRobot</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isComposedOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:comment>Scenario isComposedOf Area</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isContainedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:comment>Element isContainedIn Area</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDescribedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExtraFeature"/>
+        <rdfs:comment>Element isDescribedBy ExtraFeature</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDirectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDirectedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#AccessKind"/>
+        <rdfs:comment>Access isDirectedBy AccessKind</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDivividedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDivividedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:comment>Area isDividedIn Area</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isGrantedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isGrantedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrivilegeKind"/>
+        <rdfs:comment>Person isGrantedBy PrevilegeKind</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isImplementedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isImplementedAs">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <rdfs:comment>Capability isImplementedAs ServiceRobotBehavior</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isMadeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isMadeOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#MaterialKind"/>
+        <rdfs:comment>ScenarioObject isMadeOf MaterialKind</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isMeasuredAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isMeasuredAs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint"/>
+        <rdfs:comment>Area isMeasuredAs PositionPoint</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isOrchestratedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isOrchestratedIn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#orchestrates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExecutionPlan"/>
+        <rdfs:comment>Step isOrchestratedIn ExecutionPlan</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isParent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PartConnection"/>
+        <rdfs:comment>ServiceRobotPart isParent PartConnection</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario"/>
+        <rdfs:comment>Area isPartOf Scenario</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPartOfContract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPartOfContract">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Contract"/>
+        <rdfs:comment>ServiceRobotPart isPartOfContract Contract</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPerformedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#performs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot"/>
+        <rdfs:comment>Capability isPerformedBy ServiceRobot</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPlannedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPlannedAs">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#plans"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExecutionPlan"/>
+        <rdfs:comment>Task isPlannedAs ExecutionPlan</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPositionedPAccess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPositionedPAccess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:comment>Access isPositionedPAccess Pose</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPositionedPArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPositionedPArea">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:comment>Area isPositionedPArea Pose</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPositionedPElem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPositionedPElem">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#posesElem"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:comment>Element isPositionedPElem Pose</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isRelatedTo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#relates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#QualitativePosKind"/>
+        <rdfs:comment>RelativeRegion isRelatedTo QualitativePosKind</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isStageOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isStageOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SingleStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep"/>
+        <rdfs:comment>SingleStep isStageOf ComposedStep</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isSubComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isSubComponentOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:comment>ServiceRobotPart isSubComponentOf ServiceRobotPart</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#occuresIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#occuresIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario"/>
+        <rdfs:comment>Task occuresIn Scenario</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#orchestrates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#orchestrates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExecutionPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+        <rdfs:comment>ExecutionPlan orchestrates Step</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#orients -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#orients">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#OrientationMeasure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:comment>OrientationMeasure orients Pose</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#performs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <rdfs:comment>ServiceRobot performs Capability</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#plans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#plans">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExecutionPlan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task"/>
+        <rdfs:comment>ExecutionPlan plans Task</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#posesElem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#posesElem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:comment>Pose posesElem Element</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#positions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#positions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <rdfs:comment>PositionMeasure positions Pose</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#referesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#referesTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:comment>RelativeRegion referesTo Element</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#relates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#relates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#QualitativePosKind"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion"/>
+        <rdfs:comment>QualitativePosKind relates RelativeRegion</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#represents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#represents">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SingleStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <rdfs:comment>SingleStep represents Capability</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#requiresReqAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#requiresReqAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement"/>
+        <rdfs:comment>PrimitiveSkill requires Requirement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#requiresReqPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#requiresReqPart">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement"/>
+        <rdfs:comment>ServiceRobotPart requires Requirement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#requiresReqTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#requiresReqTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement"/>
+        <rdfs:comment>Task requires Requirement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#angle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#angle">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#author -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#author">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#biometrics -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#biometrics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#color -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#color">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordX -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordX">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordXBotton -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordXBotton">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordXTop -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordXTop">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordY -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordY">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordYBotton -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordYBotton">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordYTop -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordYTop">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordZ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coordZ">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#featureName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#featureName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExtraFeature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#featureType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#featureType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExtraFeature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#featureValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#featureValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExtraFeature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasHandle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasHandle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDeformable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isDeformable">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#isOpen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isOpen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#lastSeen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#lastSeen">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#picture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#picture">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#purpose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognitionLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognitionLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#shape -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#shape">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#steps -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#steps">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#wallHigh -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wallHigh">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#weight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access">
+        <rdfs:comment>Access: is a means of entering an Area. An access may represent a connection between Areas. It has a name, a direction (AccessKind) and a Pose.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#AccessKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#AccessKind">
+        <rdfs:comment>AccessKind: defines the direction of an Access: IN (only entrance) OUT (only exit) or IN_OUT (both entrance and exit).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Cognition"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Sensing"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+        <rdfs:comment>Actuating: is a PrimitiveSkill related to act and modify the environment. Examples: speak.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area">
+        <rdfs:comment>Area: represents the parts of a Scenario. It may be composed of another Area (subarea) and has one or more Access. 
+
+Examples of Areas in a DomesticScenario are bedroom, dining room, living room, and kitchen. 
+
+Examples of Area in a PublicScenario are reception, and rooms in a hotel. In this, the room may be composed of a bedroom and a bathroom (both are represented as Area in the ontology). Other examples of Area in a PublicScenario are the kitchen and the lounge of a restaurant. An Area has a name, a wallHeight (in meters), the coordinates of an uppeRightCorner and a bottomLeftCorner forming a rectangle that represents the Area. Besides, an Area also has a Pose.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#BoundBox -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#BoundBox">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionRegion"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionRegion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion"/>
+        <rdfs:comment>BoundBox: is a PositionRegion (CORA), i.e., a set of position points in a given coordinate system, delimited by a rectangle surrounding an Element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SingleStep"/>
+        <rdfs:comment>Capability: is the combination of behaviors, robot parts, and organization that delivers a specified outcome. A capability specifies WHAT the robot can deliver without defining HOW to do it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryAgent">
+        <rdfs:comment>Role: defines the purpose/position of an Agent in the Area, e.g. a resident of a house, an elderly person, a nurse caring for an elderly person, a housekeeper. Each role is associated with one or more Privilege (PrivilegeKind).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryObject">
+        <rdfs:comment xml:lang="home domain are bed, couch, table, chair, trash bins, television, cupboard, bookcase, coat rack, dishwasher, sink and powered refrigerator; - decoration, scenarioobject used to decorate the area, e.g. a plant jar; - tableware, dish, bowl, cup, and napkin;  - cutlery, fork, knife, and spoon;  - trash bags, big plastic trash bags, preferably with handles; - bags, lightweight with stiff, vertical handles; - trays, tray or basket, intended for two-handed manipulation; - pourable, an object whose content can be poured, e.g., jug; - heavy object, weight between 1.0kg and 1.5kg ,e.g., water bottle; - tiny object, a lightweight object, no bigger than 5cm, e.g., teabag; - fragile object, an easy-to-break object, e.g., egg; - deformable object, a flexible object that may appear in different shapes, e.g., cloth.">CategoryKind: classifies a ScenarioObject according to its type as: 
+
+- Furniture, ScenarioObject that the service robot does not intend to move during a task. Examples of furniture in the RoboCup</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Cognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Cognition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Sensing"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+        <rdfs:comment>Cognition: is a PrimitiveSkill related to data processing. Examples: Robot training and face recognition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SingleStep"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+        <rdfs:comment>ComposedStep: is a Step composed of other Steps. The composition of steps must end in a SingleStep.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Contract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Contract">
+        <rdfs:comment>Contract: establishes an agreement between a PrimitiveActions and a ServiceRobotPart. It links a specific PrimitiveAction to the necessary parts for its implementation, i.e., there should be a Contract relating the PrimiviteAction to the ServiceRobotParts required so that the PrimitiveAction can be implemented/executed by a ServiceRobot that has that ServiceRobotParts. 
+
+A PrimitiveAction may require n parts. For each part, a contract is defined. In a Contract, the PrimitiveAction and the ServiceRobotPart&apos;s non-functional requirements must be compatible* (Match).  Examples: (i) a SoftwarePart that executes in 0.5s is compatible with a PrimitiveAction that requires execution in a maximum of 1s; (ii) A camera (RobotSensingPart) that provides an image at 10 frames/s is compatible with a PrimitiveAction that requires an image at least 5 frames/s; (iii) a DevicePart that uses a maximum of 50mA is compatible with a PrimitiveAction that requires up to 70mA.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SoftwarePart"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:comment>DevicePart:  represents the hardware parts (RobotPart in CORA) of a service robot, i.e. a RobotProcessingPart (CORA), a RobotSenssingPart (CORA), a RobotActuatingPart (CORA) or a RobotCommunicatingPart (CORA).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#DomesticScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DomesticScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PublicScenario"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario"/>
+        <rdfs:comment xml:lang="home, or a real-world house.">DomesticScenario: is a Scenario in a typical domestic setting, e.g., an arena of the RoboCup</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Lift"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Ramp"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Stair"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <rdfs:comment>Door: is a kind of Access that can be opened or closed. A Door may have a handle (hasHandle attribute) and has a state indicating if it is opened or closed (isOpen attribute).
+
+- hasOpenningDevice: when true, it indicates that there is a device (e.g., a handle or a button) that can be used to open the door; otherwise, there isn&apos;t such a device.
+- isOpen: when true, indicates that the door is open, otherwise the door is closed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element">
+        <rdfs:comment>Element: extends Object (“normal physical objects” - SUMO) and is anything or anybody inside an Area. An Element has a Pose and the timestamp with the last time the pose was captured. Besides, an Element has a recognitionLevel that represents the probability of recognition by a service robot: zero means unrecognizable, and one means fully recognizable. Usually, the recognition probability is directly related to the amount of information that the service robot has about the element. Elements can be of two types: Agent or ScenarioObject.
+
+Ex.: Consider a receptionist robot welcoming a guest at a hotel. Initially, the robot knows nothing about the guest, but identifies him as a person. In this case the recognitionLevel is set to a value near to zero. Over time, the robot stores features of this person, e.g. cloth color, to direct its service to that person, so the recognitionLevel is increased as the amount of information (that can be used to recognize the person) increases. When the guest checks in, he provides some data, such as biometrics, thus, the robot can precisely identify him, the recognitionLevel is set to a value near one. In this way, the recognitionLevel of a person increases over time; thus, his/her recognition is more likely.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ElementThatHasPose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ElementThatHasPose">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isPositionedPElem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Which element has pose?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExecutionPlan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExecutionPlan">
+        <rdfs:comment>ExecutionPlan: is an arrangement of steps for Task execution. In this arrangement, Steps can be orchestrated in parallel or sequentially using, for example, a behavior tree or UML state machine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExtraFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExtraFeature">
+        <rdfs:comment>ExtraFeature: is any extra feature modeled to represent information of an Element that is not explicitly defined in the current version of the ontology. Examples of ExtraFeature for a Person are his cloth color and gender. Examples of ExtraFeature for a ScenarioObject are its color and texture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Goal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Lift -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Lift">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Ramp"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Stair"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <rdfs:comment>Lift: is a kind of Access that is a transportation device like a box that moves up and down. It has a capacity indicating the maximum weight supported.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#MaterialKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#MaterialKind">
+        <rdfs:comment>MaterialKind: is the physical substance that the object is made from, e.g., plastic, metal, wood.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#OrientationMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#OrientationMeasure">
+        <rdfs:comment>Orientation Measure (CORA): is essentially a measure (or observation) attributed to the orientation of a given (physical) object. In this context, orientation denotes the information regarding where the object is pointing to in relation to the reference object of the orientation coordinate system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PartConnection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PartConnection">
+        <rdfs:comment>PartConnection: is a connection (physical or logical) between two RobotPart. 
+
+For example, the connection of a RobotSensingPart (e.g. a camera) with a RobotPart (e.g. chassis), e.g. in Gazebo simulator called Joint;  the connection of a SoftwarePart (e.g. a library) with a RobotSensingPart (e.g. camera), in Gazebo Simulator called Plugin.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioAgent"/>
+        <rdfs:comment>Person: specializes Agent and represents a human being participating in the Scenario. During a person&apos;s lifetime some feature can be set to enable his/her recognition.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose">
+        <rdfs:comment>Pose (CORA): “A position and an orientation constitute a pose. The pose of an object is the description of any position and orientation measurements of that object. “</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PoseOfElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PoseOfElement">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#posesElem"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Pose of each element</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure">
+        <rdfs:comment>Position Measure (CORA): “A measure (SUMO) attributed to a (physical) object (SUMO) describing its position. A position can be described by a point or a region. For instance, one can describe a robot as positioned at coordinates (x, y) in the coordinate system, or at the front of the box, where ‘front’ comprises a conical region centered on the box and pointed forward.”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionRegion"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure"/>
+        <rdfs:comment>Position point (CORA): “A point in a position coordinate system. It denotes a precise indication of position of a given object. Position points are always defined in a single coordinate system.”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionRegion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionMeasure"/>
+        <rdfs:comment>Position Region (CORA): “An abstract region in a position coordinate system. More specifically, a position region is defined by position points in a given coordinate system. It defines qualitative positions such as ‘left of’, ‘in front of’, ‘on top of’, etc. These expressions define regions in relation to a reference object in which other objects are placed. A position region is always generated by a given spatial operator applied to a list of reference objects.”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill">
+        <rdfs:comment>PrimitiveSkill:  consists of using service robot parts to produce a specific result. A PrimitiveSkill is a behavior ATOMIC STAGE, i.e., it CAN NOT be composed by other PrimitiveSkill.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrivilegeKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrivilegeKind">
+        <rdfs:comment>PrivilegeKind: defines a Person&apos;s special rights, advantage, or immunity granted when interacting with the ServiceRobot. The Person&apos;s rights are the command levels over the behavior or tasks the robot can perform. For example: in a DomesticScenario, a Person with the GUEST privilege interacts with the ServiceRobot, but does not have permission to operate it; a Person with the HOST privilege has permission to give orders/commands to the ServiceRobot.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#PublicScenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PublicScenario">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DomesticScenario"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario"/>
+        <rdfs:comment>PublicScenario: is a non-structured place, such as, a restaurant, a hotel or a supermarket.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#QualitativePosKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#QualitativePosKind">
+        <rdfs:comment>QualitativePosKind: represents a domain for possible relative positions. Examples are LEFT, RIGHT, ONTOP, BELOW.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Ramp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Ramp">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Lift"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Stair"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <rdfs:comment>Ramp: is a slope or inclined plane for joining two different levels. Slope can be expressed in angles, gradients or grades.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionRegion"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#BoundBox"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionRegion"/>
+        <rdfs:comment>RelativeRegion: is a PositionRegion (CORA) indicating a qualitative position about a referenced Element. Possible qualitative positions are predefined in the QualitativePosKind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement">
+        <rdfs:comment>Requirement:  represents a proposition (SUMO) that must be fulfilled. It has a description of its purpose, a type (reqType), belongs to a domain (reqDomain), and is specialized in PartRequirement and CapabilityRequirement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementDomainKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementDomainKind">
+        <rdfs:comment>RequirementDomainKind: represents the requirement domain, e.g., usability, time (execution time), or distance (minimal distance, e.g., to see or hear).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementTypeKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementTypeKind">
+        <rdfs:comment>RequirementTypeKind: indicates whenever it refers to a functional or non-functional requirement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotCommunicatingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotProcessingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotCommunicatingPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotCommunicatingPart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotProcessingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotProcessingPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotProcessingPart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotCommunicatingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotCommunicatingPart"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotProcessingPart"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Scenario">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#isComposedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Scenario: is a place where a ServiceRobot performs tasks. It contains at least one Area. A Scenario can be of two types: DomesticScenario or PublicScenario.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioAgent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:comment>Agent (SUMO): “Something or someone that can act on its own and produce changes in the world”. An agent may interact with the service robot during a task.  Examples of agents are animals (e.g., a dog walking in the house) and other robots (e.g., a robot delivering a pizza). 
+
+Agents are associated with Roles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioAgent"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Element"/>
+        <rdfs:comment>ScenarioObject: specializes Element and represents things arranged in an Area. A ScenarioObject has a description, a category (CategoryKind), weight, shape, can be deformable, and is made of a material (MaterialKind). 
+
+- Weigh defines the object’s weight in grams, e.g., 30g.
+- Shape defines the object’s volume in mash 3D
+- IsDeformable indicates whether the object can be deformed (true) or not (false).
+- Material defines the object’s material according to the MaterialKind domain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Sensing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Sensing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Cognition"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrimitiveSkill"/>
+        <rdfs:comment>Sensing: is a PrimitiveSkill related to sensing and capturing data from the environment. Examples are: see (capture a video) and hear (capture sounds).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>ServiceRobot:  is a fully autonomous Robot (CORA) for personal or professional use that performs useful tasks for humans or equipment (ISO8373:2021). It may involve human interaction (ISO8373:2021) but does not allow human intervention. 
+
+- Human Interaction (ISO8373:2021): “information and action exchanges between human and robot to perform a task by means of a user interface. Exchanges through vocal, visual and tactile means”. 
+- Human intervention: external (remote or in-person) human control.
+- Personal use: includes tasks related to personal assistance such as cooking, cleaning, carrying things, and handling or serving of items.
+- Professional use includes tasks related to personal assistance in a non-structured environment, such as, serving dinner in a restaurant, welcoming a hotel guest.
+
+A ServiceRobot has a name and a status, indicating whenever it is working, shutdown or charging.
+
+* ServiceRobot does NOT include industrial robots, medical robots, or teleoperated robots. In some situations, a robot may assume more than one role, e.g., a hybrid ServiceRobot and teleoperated robot. Although this is possible, it is outside this ontology&apos;s scope. 
+* This ontology does not consider Robot Group (CORA). Cooperation among robots to achieve a goal may be considered in future releases.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior">
+        <rdfs:comment>ServiceRobotBehavior: represents a capability realization according to a specific implementation strategy. It orchestrates the set of PrimitiveSkills necessary for a capability implementation. The orchestration consists of the coordination of PrimitiveSkills, i.e., involves the definition of a workflow or pipeline, with the PrimitiveSkills needed to perform the behavior. PrimitiveSkills can be orchestrated in parallel or sequentially using, for example, behavior tree or UML state machine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart">
+        <rdfs:comment>ServiceRobotPart: represents the parts that compose a ServiceRobot. 
+
+A ServiceRobotPart can be composed of another ServiceRobotPart (named subpart). 
+
+A ServiceRobot may have hardware parts (DevicePart) or software parts (SoftwarePart). 
+
+A part can be connected to other parts through the definition of PartConnection.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#SingleStep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SingleStep">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step"/>
+        <rdfs:comment>SingleStep: is a Step that can not be composed of another Step (e.g. considering a tree, steps are the leaves of the tree). It refers to a Capacity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#SoftwarePart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SoftwarePart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotPart"/>
+        <rdfs:comment>SoftwarePart: is an abstract entity (SUMO) that represents the software components of a ServiceRobot, e.g., software functions, libraries, and applications.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Stair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Stair">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Lift"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Ramp"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <rdfs:comment>Stair: is a kind of Access that connects lower and higher levels using steps.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#StatusKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#StatusKind"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Step">
+        <rdfs:comment>Step: represents a stage of the ExecutionPlan with a particular purpose. There are two types of Step: ComposedStep and SingleStep.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task">
+        <rdfs:comment>Task: represents the work performed by the ServiceRobot when serving a human. A Task has a name, a description, main goals (at least one), and may have optional goals. Tasks are performed in a set of steps organized as an ExecutionPlan.
+
+- Name defines the task name, e.g., Receptionist. 
+- Description gives a brief explanation of the task, e.g., “The robot has to take new guests to the living room to introduce them and offer a free place to sit”.
+- Main goal: describes what the serviceRobot wants to achieve, e.g. “Introduce newcomers to a party and maintain appropriate gaze direction (at a person, the direction of navigation)”.
+- Optional goal: adds optional purposes, e.g., “Open the entrance door for each arriving guest” and “Describe the guest for the other people”.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint"/>
+        <rdfs:comment>3DPoint: is a 3D point in a position coordinate system indicating a specific location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningKitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningKitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <ROSIE1:isDirectedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#inOut"/>
+        <ROSIE1:name>dining inOut kitchen</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningLiving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningLiving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <ROSIE1:isDirectedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#inOut"/>
+        <ROSIE1:name>dining inOut living</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_livingBedroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_livingBedroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Access"/>
+        <ROSIE1:isDirectedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#inOut"/>
+        <ROSIE1:name>living inOut bedroom</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#addNewFace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#addNewFace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveInformation"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#learnFace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#arena2024 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#arena2024">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DomesticScenario"/>
+        <ROSIE1:isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bedRoom"/>
+        <ROSIE1:isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#dining"/>
+        <ROSIE1:isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#kitchen"/>
+        <ROSIE1:isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#living"/>
+        <ROSIE1:name>Arena Robotica 2024</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bedRoom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bedRoom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_livingBedroom"/>
+        <ROSIE1:isCategorizedCatObject rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#furniture"/>
+        <ROSIE1:isPartOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#arena2024"/>
+        <ROSIE1:isPositionedPArea rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_bedRoom"/>
+        <ROSIE1:name>Bed room</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#beer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#beer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <ROSIE1:isPositionedPElem rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_beer1"/>
+        <ROSIE1:description>Bottle of beer</ROSIE1:description>
+        <ROSIE1:isDeformable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ROSIE1:isDeformable>
+        <ROSIE1:name>Beer</ROSIE1:name>
+        <ROSIE1:recognitionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</ROSIE1:recognitionLevel>
+        <ROSIE1:shape>cylinder</ROSIE1:shape>
+        <ROSIE1:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</ROSIE1:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#below -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#below">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#QualitativePosKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhCountPeople -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhCountPeople">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#capturePicture"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#count"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhGiveInformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhGiveInformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#speak"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhLearnFace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhLearnFace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#capturePicture"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#speak"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhLookTo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhLookTo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#stare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhRecognizeFace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhRecognizeFace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#capturePicture"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#identifyFace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhSpin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhSpin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#turn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhWalkTo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhWalkTo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobotBehavior"/>
+        <ROSIE1:coordenates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#walk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#bottomDining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bottomDining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint"/>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</ROSIE1:coordX>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ROSIE1:coordX>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#capturePicture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#capturePicture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Sensing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#chair1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#chair1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <ROSIE1:isCategorizedCatObject rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#furniture"/>
+        <ROSIE1:name>Chair1</ROSIE1:name>
+        <ROSIE1:recognitionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</ROSIE1:recognitionLevel>
+        <ROSIE1:shape>Cylinder</ROSIE1:shape>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#chair2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#chair2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <ROSIE1:isCategorizedCatObject rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#furniture"/>
+        <ROSIE1:name>Chair2</ROSIE1:name>
+        <ROSIE1:recognitionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</ROSIE1:recognitionLevel>
+        <ROSIE1:shape>Cylinder</ROSIE1:shape>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#charging -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#charging">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#StatusKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#chassi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#chassi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#DevicePart"/>
+        <ROSIE1:name>Chassi</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#clothColor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#clothColor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExtraFeature"/>
+        <ROSIE1:featureName>clothColor</ROSIE1:featureName>
+        <ROSIE1:featureType>string</ROSIE1:featureType>
+        <ROSIE1:featureValue>Blue</ROSIE1:featureValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#coke1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coke1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <ROSIE1:isPositionedPElem rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_coke1"/>
+        <ROSIE1:description>Bottle of coke</ROSIE1:description>
+        <ROSIE1:isDeformable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ROSIE1:isDeformable>
+        <ROSIE1:name>Coke</ROSIE1:name>
+        <ROSIE1:recognitionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.75</ROSIE1:recognitionLevel>
+        <ROSIE1:shape>cylinder</ROSIE1:shape>
+        <ROSIE1:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.35</ROSIE1:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#count -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#count">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Cognition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#countPeople -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#countPeople">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <ROSIE1:isImplementedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhCountPeople"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#deepCamera1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#deepCamera1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart"/>
+        <ROSIE1:name>Deep Camera</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#dining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#dining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#beer1"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#coke1"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#diningShelf"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#diningTable"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningKitchen"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningLiving"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#entrance"/>
+        <ROSIE1:isMeasuredAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bottomDining"/>
+        <ROSIE1:isMeasuredAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#upperDining"/>
+        <ROSIE1:isPartOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#arena2024"/>
+        <ROSIE1:isPositionedPArea rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_dining"/>
+        <ROSIE1:name>Dining room</ROSIE1:name>
+        <ROSIE1:wallHigh rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</ROSIE1:wallHigh>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#diningShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#diningShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <ROSIE1:isCategorizedCatObject rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#furniture"/>
+        <ROSIE1:isPositionedPElem rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_diningShelf"/>
+        <ROSIE1:description>shelf to store food</ROSIE1:description>
+        <ROSIE1:name>dining shelf</ROSIE1:name>
+        <ROSIE1:recognitionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7</ROSIE1:recognitionLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#diningTable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#diningTable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioObject"/>
+        <ROSIE1:isCategorizedCatObject rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#furniture"/>
+        <ROSIE1:isPositionedPElem rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_diningTable"/>
+        <ROSIE1:description>the main table of the house</ROSIE1:description>
+        <ROSIE1:name>dining table</ROSIE1:name>
+        <ROSIE1:recognitionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</ROSIE1:recognitionLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#dog1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#dog1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ScenarioAgent"/>
+        <ROSIE1:isCharacterizedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pet"/>
+        <ROSIE1:name>Bob</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#east -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#east">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#OrientationMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#entrance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#entrance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door"/>
+        <ROSIE1:isDirectedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#in"/>
+        <ROSIE1:isPositionedPAccess rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_entrance"/>
+        <ROSIE1:hasHandle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ROSIE1:hasHandle>
+        <ROSIE1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ROSIE1:isOpen>
+        <ROSIE1:name>entrance door</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#execPlanFC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#execPlanFC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ExecutionPlan"/>
+        <ROSIE1:orchestrates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#addNewFace"/>
+        <ROSIE1:orchestrates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveResults"/>
+        <ROSIE1:orchestrates rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognizePerson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#exit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#exit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Door"/>
+        <ROSIE1:isDirectedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#out"/>
+        <ROSIE1:hasHandle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ROSIE1:hasHandle>
+        <ROSIE1:isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ROSIE1:isOpen>
+        <ROSIE1:name>exit door</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#faceRecognition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#faceRecognition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Task"/>
+        <ROSIE1:hasGoal rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#goalFC1"/>
+        <ROSIE1:hasGoal rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#goalFC2"/>
+        <ROSIE1:isPlannedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#execPlanFC"/>
+        <ROSIE1:occuresIn rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#arena2024"/>
+        <ROSIE1:author>RoboCupAtHome rulebook 2024</ROSIE1:author>
+        <ROSIE1:description>An Operator is introduced to the robot, which needs to learn what the Operator looks like. Once the robot has gathered enough information about the Operator, the Operator mixes within a crowd xand the robot needs to find the Operator. Once the robot has found its Operator, it must explain how it must state information about the Operator.</ROSIE1:description>
+        <ROSIE1:name>Personal Recognition</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#followDLL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#followDLL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#SoftwarePart"/>
+        <ROSIE1:requiresReqPart rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#reqSoftw1"/>
+        <ROSIE1:name>Follow</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#functional -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#functional">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementTypeKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#furniture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#furniture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveInformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveInformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <ROSIE1:isImplementedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhGiveInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveResults -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveResults">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveInformation"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#lookTo"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#walkTo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#goalFC1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#goalFC1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Goal"/>
+        <ROSIE1:description>The robot has to identify the Operator within a crowd xand state information about the Operator xand the crowd.</ROSIE1:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#goalFC2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#goalFC2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Goal"/>
+        <ROSIE1:description>Identify the operator by your name.</ROSIE1:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#guest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#guest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrivilegeKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hardware -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hardware">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementDomainKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#host -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#host">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PrivilegeKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#houseKeeper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#houseKeeper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryAgent"/>
+        <ROSIE1:name>HouseKeeper</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hub1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hub1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotCommunicatingPart"/>
+        <ROSIE1:name>10 Ports HUB</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#hub2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hub2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotCommunicatingPart"/>
+        <ROSIE1:name>Exbom HUB 30A</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#identifyFace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#identifyFace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Cognition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#in -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#in">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#AccessKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#inOut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#inOut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#AccessKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#dog1"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#person2"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningKitchen"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#exit"/>
+        <ROSIE1:isPartOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#arena2024"/>
+        <ROSIE1:isPositionedPArea rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_kitchen"/>
+        <ROSIE1:name>Kitchen</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#learnFace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#learnFace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <ROSIE1:isImplementedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhLearnFace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#living -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#living">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Area"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#chair1"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#chair2"/>
+        <ROSIE1:contains rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#person1"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_diningLiving"/>
+        <ROSIE1:isAccessedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#access_livingBedroom"/>
+        <ROSIE1:isPartOf rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#arena2024"/>
+        <ROSIE1:isPositionedPArea rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_living"/>
+        <ROSIE1:name>Living room</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#lookTo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#lookTo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <ROSIE1:isImplementedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhLookTo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#MaterialKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#microcontroller1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#microcontroller1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotProcessingPart"/>
+        <ROSIE1:name>ESP32-WROOM 38 PIN</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#mother -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#mother">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryAgent"/>
+        <ROSIE1:name>Mother</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#motor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#motor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+        <ROSIE1:name>DC Motor H-bridge L298</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#navigate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#navigate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#next -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#next">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#QualitativePosKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#nonFunctional -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#nonFunctional">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementTypeKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#north -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#north">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#OrientationMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#out -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#out">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#AccessKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#over -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#over">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#QualitativePosKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#person1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#person1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person"/>
+        <ROSIE1:isCharacterizedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#mother"/>
+        <ROSIE1:isGrantedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#host"/>
+        <ROSIE1:isPositionedPElem rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_person1"/>
+        <ROSIE1:biometrics>face of Maria</ROSIE1:biometrics>
+        <ROSIE1:name>Maria</ROSIE1:name>
+        <ROSIE1:recognitionLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ROSIE1:recognitionLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#person2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#person2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Person"/>
+        <ROSIE1:isCharacterizedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#houseKeeper"/>
+        <ROSIE1:isDescribedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#clothColor"/>
+        <ROSIE1:isGrantedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#guest"/>
+        <ROSIE1:isPositionedPElem rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_person2"/>
+        <ROSIE1:name>Joana</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#CategoryAgent"/>
+        <ROSIE1:name>Pet</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#plastic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#plastic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#MaterialKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#point1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint"/>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ROSIE1:coordX>
+        <ROSIE1:coordY rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.5</ROSIE1:coordY>
+        <ROSIE1:coordZ rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</ROSIE1:coordZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#point2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint"/>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.8</ROSIE1:coordX>
+        <ROSIE1:coordY rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.5</ROSIE1:coordY>
+        <ROSIE1:coordZ rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</ROSIE1:coordZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#point3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint"/>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ROSIE1:coordX>
+        <ROSIE1:coordY rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ROSIE1:coordY>
+        <ROSIE1:coordZ rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</ROSIE1:coordZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#point4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint"/>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</ROSIE1:coordX>
+        <ROSIE1:coordY rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</ROSIE1:coordY>
+        <ROSIE1:coordZ rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</ROSIE1:coordZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#point5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#3DPoint"/>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</ROSIE1:coordX>
+        <ROSIE1:coordY rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</ROSIE1:coordY>
+        <ROSIE1:coordZ rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</ROSIE1:coordZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_bedRoom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_bedRoom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_beer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_beer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <ROSIE1:hasOrientation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#north"/>
+        <ROSIE1:hasPosition rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_coke1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_coke1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <ROSIE1:hasOrientation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#north"/>
+        <ROSIE1:hasPosition rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#relativeRegion1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_dining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_dining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <ROSIE1:hasOrientation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#west"/>
+        <ROSIE1:hasPosition rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_diningShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_diningShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <ROSIE1:hasOrientation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#north"/>
+        <ROSIE1:hasPosition rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_diningTable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_diningTable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <ROSIE1:hasOrientation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#north"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_entrance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_entrance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <ROSIE1:hasOrientation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#west"/>
+        <ROSIE1:hasPosition rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+        <ROSIE1:hasOrientation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#east"/>
+        <ROSIE1:hasPosition rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#point3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_living -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_living">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_person1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_person1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_person2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#pose_person2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Pose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognizeFace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognizeFace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <ROSIE1:isImplementedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhRecognizeFace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognizePerson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognizePerson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ComposedStep"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#countPeople"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveInformation"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognizeFace"/>
+        <ROSIE1:composes rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#spin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#relativeRegion1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#relativeRegion1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RelativeRegion"/>
+        <ROSIE1:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#next"/>
+        <ROSIE1:referesTo rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#beer1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#reqSoftw1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#reqSoftw1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Requirement"/>
+        <ROSIE1:hasDomain rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hardware"/>
+        <ROSIE1:hasType rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#functional"/>
+        <ROSIE1:description>Requires a deep camera</ROSIE1:description>
+        <ROSIE1:name>Req1</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#robotBill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#robotBill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#chassi"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#deepCamera1"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#followDLL"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hub1"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#hub2"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#microcontroller1"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#motor"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#sensorEncoder"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#sensorLidar"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel1"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel2"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel3"/>
+        <ROSIE1:hasComponent rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel4"/>
+        <ROSIE1:hasSituation rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#shutdown"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#countPeople"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#giveInformation"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#learnFace"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#lookTo"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#navigate"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#recognizeFace"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#spin"/>
+        <ROSIE1:performs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#walkTo"/>
+        <ROSIE1:name>Bill Estranho</ROSIE1:name>
+        <rdfs:comment>Example of ServiceRobot</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#robotMike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#robotMike">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#ServiceRobot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#sensorEncoder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#sensorEncoder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart"/>
+        <ROSIE1:name>Encoder B37Y3530-131EN</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#sensorLidar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#sensorLidar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotSensingPart"/>
+        <ROSIE1:name>LIDAR lslidar Leishen  N10</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#shutdown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#shutdown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#StatusKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#speak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#speak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#spin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#spin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <ROSIE1:isImplementedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhSpin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#stare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#stare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementDomainKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#turn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#turn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#upperDining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#upperDining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#PositionPoint"/>
+        <ROSIE1:coordX rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</ROSIE1:coordX>
+        <ROSIE1:coordY rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</ROSIE1:coordY>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#usability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#usability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RequirementDomainKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#walk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#walk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Actuating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#walkTo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#walkTo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#Capability"/>
+        <ROSIE1:isImplementedAs rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#bhWalkTo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#west -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#west">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#OrientationMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+        <ROSIE1:name>Omnidirectional mecanum wheels - LMF (left).</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+        <ROSIE1:name>Omnidirectional mecanum wheel - RMF (right)</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+        <ROSIE1:name>Omnidirectional mecanum wheel - RMR (right)</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wheel4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#RobotActuatingPart"/>
+        <ROSIE1:name>Omnidirectional mecanum wheel - LMR (left)</ROSIE1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#wood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#wood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#MaterialKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/8/ROSIE#working -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/8/ROSIE#working">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/8/ROSIE#StatusKind"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
